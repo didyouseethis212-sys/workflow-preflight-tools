@@ -2,6 +2,10 @@
 
 Browser-local checks for developers and automation operators. Try real synthetic inputs without an account before deciding whether a hosted API is useful. I maintain these tools; development and documentation are AI-assisted.
 
+## CSV-first order/shipment release
+
+[Download the focused two-case CSV tutorial and read the setup](https://github.com/didyouseethis212-sys/workflow-preflight-tools/releases/tag/v0.2.0). The free order checker now accepts pasted/file CSV input and shipment header mappings. The shared discovery page lists [all 11 free local tools](https://portfolio-tools-relay.mayasmile.workers.dev/).
+
 ## Runnable n8n example
 
 Download [workflow.json](workflow.json), inspect its Code node, import into an inactive workflow and run the manual trigger. Native import and execution verified in n8n 2.46.6. No credentials or HTTP nodes. Two synthetic cases show a JSON /status change (ignoring /updatedAt) and a one-unit order/shipment discrepancy. This tutorial is not an approved n8n library template.
@@ -19,10 +23,12 @@ Download [workflow.json](workflow.json), inspect its Code node, import into an i
 | mail-auth-change-guard | Compare DMARC XML report batches locally. Find newly failing sources, failure-rate changes and repeated reports. Free checker and hosted recurring API. | [Open local checker](https://mail-auth-change-guard-trial.mayasmile.workers.dev/) | [Plans](https://rapidapi.com/didyouseethis212sys/api/mail-auth-change-guard/pricing) |
 | webhook-effect-guard | Compare webhook delivery logs with durable workflow effects. Separate normal retries from missing or duplicate effects. Free local JSON audit and recurring API. | [Open local checker](https://webhook-effect-guard.mayasmile.workers.dev/) | [Plans](https://rapidapi.com/didyouseethis212sys/api/webhook-effect-guard/pricing) |
 | open-contract-guard | Check selected consumer response fields against proposed OpenAPI changes. Flag watchlist breaks and explicit incomplete coverage. Free local JSON trial and hosted API. | [Open local checker](https://open-contract-guard.mayasmile.workers.dev/) | [Plans](https://rapidapi.com/didyouseethis212sys/api/open-contract-guard/pricing) |
+| Bill Import Gate | Review mapped invoice identities and conflicts before a ledger import; JSON input. | [Free trial](https://bill-import-gate.mayasmile.workers.dev/) | [Plans](https://rapidapi.com/didyouseethis212sys/api/bill-import-gate/pricing) |
+| Inventory Feed Gate | Review supplier stock feeds before import. | [Free trial](https://inventory-feed-gate.mayasmile.workers.dev/) | [Plans](https://rapidapi.com/didyouseethis212sys/api/inventory-feed-gate/pricing) |
 
 ## Free versus hosted
 
-The local checks remain free. The first six tools offer BASIC 100 hosted requests/month free and PRO $5/month for 1,000. Mail Auth, Webhook Effect and Open Contract offer BASIC 25 free requests/month and PRO $9/month for 500. Hard request limits apply; RapidAPI platform bandwidth fees and terms are separate. Follow the current plan page before subscribing.
+The local checks remain free. The first six tools offer BASIC 100 hosted requests/month free and PRO $5/month for 1,000. Mail Auth, Webhook Effect, Open Contract, Bill Import and Inventory Feed offer BASIC 25 free requests/month and PRO $9/month for 500. Hard request limits apply; RapidAPI platform bandwidth fees and terms are separate. Follow the current plan page before subscribing.
 
 No API subscription is needed for the local example. An existing script or library may be sufficient. Hosted calls receive the input sent to the API; sanitize it and keep your own credentials private.
 
